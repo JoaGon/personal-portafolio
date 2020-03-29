@@ -90,6 +90,7 @@ html, body {
     background: #27335F;
     border-radius: 15px;
     padding: 0;
+    overflow: hidden;
     
 }
 .navbar {
@@ -208,7 +209,7 @@ html, body {
 .btn-main{
     background: #FFFEC2 !important;
     border-radius: 30px !important;
-    width: 45%;
+    width: 100%;
     height: 45px;
     font-family: "montserratbold";
     font-style: normal;
@@ -229,4 +230,66 @@ html, body {
     color: #fdf7c2 !important;
     border-color: #FB5D42 !important;
 
+}
+
+.btn-width {
+    width: 40%;
+
+}
+
+#pwait {
+    /*display: none;*/
+      visibility:hidden;
+    
+}
+#image-about{
+    display: none;
+}
+
+.c-orange{
+    color: #FB5D42 !important;  
+}
+
+.about-app{
+    font-family: 'nixie_oneregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+}
+
+.about-me{
+    font-family: 'montserratregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+}
+
+.about-ul{
+    list-style: none;
+    font-family: 'montserratbold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+}
+
+.about-ul .value{
+    font-family: 'montserratregular';
+    font-size: 14px;
+
+
+}
+
+.about-ul li{
+    margin-bottom: 16px;
+}
+
+.disableScroll{
+    overflow-y:hidden;
+    overflow-x:hidden;
 }
