@@ -6,22 +6,18 @@ function showit() {
     tl.to(wt, 1, { left: 80, autoAlpha: 1 });
 
 }
-$(function(){
+$(function () {
     // When an open tab item from your menu is clicked
-    $(".nav-link").click(function(){
+    $(".nav-link").click(function () {
         // Hide any of the content tabs
         $(".tab").hide();
-        
+
         // Show your active tab (read from your data attribute)
         $('[data-tab ="' + $(this).data('tab') + '"]').show();
         // Optional: Highlight the selected tab
         $('li.active').removeClass('active');
         $(this).closest('li').addClass('active');
-        if( $(this).data('tab') == 'b'){
-            showOtherImage()
-        }else{
-            showMainImage()
-        }
+
     });
 });
 
@@ -29,14 +25,20 @@ $(document).ready(function () {
     showit()
 });
 
-function showOtherImage(){
-    $('#image-about').css( "display", "inline" );
-    $('#image-main').css( "display", "none" );
+function showOtherImage() {
+    $('#image-about').css("display", "inline");
+    $('#image-main').css("display", "none");
     image()
 }
 
 
-function showMainImage(){
-    $('#image-main').css( "display", "inline" );
-    $('#image-about').css( "display", "none" );
+function downloadCv() {
+    let a = document.createElement('a')
+    a.href = 'resources/cv/cv-joanelly-gonzalez.pdf'
+    a.target = '_blank'
+
+    a.download = 'resources/cv/cv-joanelly-gonzalez.pdf'.split('/').pop()
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
 }

@@ -137,12 +137,13 @@ html, body {
 }
 
 .image-profile{
-    height: 90%;
+    /*height: 90%;*/
+    margin-left: -50%;
 }
 
 .content-profile{
     position: relative;
-    top: 50%;
+    top: 60%;
     left: 10%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -278,10 +279,27 @@ html, body {
     color: #FFFEC2;
 }
 
+.contact-ul{
+    list-style: none;
+    font-family: 'montserratbold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+
+    margin-top: 15px;
+}
+
+.contact-ul .value{
+    font-family: 'montserratregular';
+    font-size: 14px;
+}
+
 .about-ul .value{
     font-family: 'montserratregular';
     font-size: 14px;
-
+    font-weight: normal;
 
 }
 
@@ -292,4 +310,336 @@ html, body {
 .disableScroll{
     overflow-y:hidden;
     overflow-x:hidden;
+}
+
+.max-height{
+    height: 100%;
+}
+
+.sub-text{
+    font-family: "montserratbold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+}
+.form-control{
+    border: 0 !important;
+    border-bottom: 1px solid #FFFEC2 !important;
+    outline: 0 !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    color: #FFFEC2 !important;
+    font-family: 'montserratregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    
+}
+.form-group>label {
+    bottom: 34px;
+    position: relative;
+    background-color: transparent;
+    padding: 0px 5px 0px 5px;
+    font-size: 1.1em;
+    transition: 0.2s;
+    pointer-events: none;
+    color: #FFFEC2 !important;
+    font-family: 'montserratregular';
+  }
+  
+  .form-control:focus~label {
+    bottom: 55px;
+    color: #FFFEC2 !important;
+
+    font-family: 'montserratregular';
+
+  }
+
+.form-control:focus {
+    outline: none !important;
+    color: #FB5D42 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25) !important;
+
+    border-bottom: 1px solid 3#FFFEC2 !important;
+    
+}
+  
+.form-control:valid~label {
+    bottom: 55px;
+}
+  
+.icon-contact{
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 32px/2 - 443px);
+    top: 770px;
+
+}
+
+dt {
+    font-weight: bold;
+}
+  
+dl {
+    margin-bottom: 50px;
+}
+  
+#bug:target {
+    outline: 4px solid #ccc;
+}
+  
+  /**
+   * tab panel widget
+   */
+.tabPanel-widget {
+    position: relative;  /* containing block for headings (top:0) */
+    background: transparent;
+    font-family: "montserratregular";
+    width: 100%;
+}
+  
+  /**
+   * because labels come first in source order - we use z-index to move them in front of the headings
+   */
+.tabPanel-widget > label {
+    position: absolute;
+    z-index: 1;
+}
+
+
+  /**
+   * labels and headings must share same values so grouping declarations in this rule prevents async edits (risk of breakage)
+   * line-height == height -> vertical centering
+   * the width dictates the offset for all headings but the first one: left offset = width * number of previous heading(s)
+   * note that width and offset of label/heading pair can be customized if necessary
+   */
+  
+  .tabPanel-widget > label,
+  .tabPanel-widget > h2 {
+    font-size: 1.1em;
+    width: 9em;
+    height: 2em;
+    line-height: 2em;
+  }
+  
+  /**
+   * position:relative is for the markers (the down arrow in tabs)
+   */
+  .tabPanel-widget > h2 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    background: transparent;
+    color: #f45b41;
+  }
+  
+  .tabPanel-widget > label {
+    border-right: none;  
+  }
+  
+  /**
+   * all first level labels and headings after the very first ones 
+   */
+  .tabPanel-widget > label ~ label,
+  .tabPanel-widget > h2 ~ h2 {
+    position: absolute;
+    top: 0;
+  }
+  
+  
+  /**
+   * We target all the label/heading pairs
+   * we increment the :nth-child() params by 4 as well as the left value (according to "tab" width)
+   */
+  
+  .tabPanel-widget label:nth-child(1),
+  .tabPanel-widget h2:nth-child(3) {
+    left: 0em;
+  }
+  
+  .tabPanel-widget label:nth-child(5),
+  .tabPanel-widget h2:nth-child(7) {
+    left: 6em;
+    border-right: none;
+  }
+  
+  .tabPanel-widget label:nth-child(9),
+  .tabPanel-widget h2:nth-child(11) {
+    left: 18em;
+  }
+  
+  /**
+   * we visually hide all the panels
+   * https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+   */
+  .tabPanel-widget input + h2 + div {
+    position: absolute !important;
+  /*  clip: rect(1px, 1px, 1px, 1px);*/
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+  }
+  /**
+   * we reveal a panel depending on which control is selected 
+   */
+  .tabPanel-widget input:checked + h2 + div {
+    position: static !important;
+    padding: 1em !important;
+    height: auto !important; 
+    width: auto !important; 
+  }
+  
+  /**
+   * shows a hand cursor only to pointing device users
+   */
+  .tabPanel-widget label:hover {
+    cursor: pointer;
+  }
+  
+  .tabPanel-widget > div {
+    background: transparent;
+    color: white;
+    padding: 1em;
+  }
+  
+  /**
+   * we hide radio buttons and also remove them from the flow
+   */
+  .tabPanel-widget input[name="tabs"] {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  
+  /** 
+   * this is to style the tabs when they get focus (visual cue)
+   */
+  
+  .tabPanel-widget input[name="tabs"]:focus + h2 {
+    outline: 1px dotted #000;
+    outline-offset: 10px;
+  }
+  
+  
+  /**
+   * reset of the above within the tab panel (for pointing-device users)
+   */
+  .tabPanel-widget:hover h2 {
+    outline: none !important;
+  }
+  
+  /**
+   * visual cue of the selection
+   */
+  .tabPanel-widget input[name="tabs"]:checked + h2 {
+    background: transparent;
+    z-index: 3;
+    color: #fdf7c2;
+  }
+  
+  /**
+   * the marker for tabs (down arrow)
+   */
+  .tabPanel-widget input[name="tabs"]:checked + h2:after {
+    content: '';
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+    left: -70px;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #f45b41;
+    background: #f45b41;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /**
+   * Make it plain/simple below 45em (stack everything)
+   */
+  @media screen and (max-width: 45em) {
+    
+    /* hide unecessary label/control pairs */
+    .tabPanel-widget label,
+    .tabPanel-widget input[name="tabs"] {
+      display: none;
+    }
+    
+    /* reveal all panels */
+    .tabPanel-widget > input + h2 + div {
+      display: block !important;
+      position: static !important;
+      padding: 1em !important;
+      height: auto !important; 
+      width: auto !important; 
+    }
+    
+    /* "unstyle" the heading */
+    .tabPanel-widget h2 {
+      width: auto;
+      position: static !important;
+      background: #999 !important;
+    }
+    
+    /* "kill" the marker */
+    .tabPanel-widget h2:after {
+      display: none !important;
+    }
+  
+  }
+
+.p-bold{
+    font-family: "montserratregular";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+}
+
+.hr-yellow{
+    border-top: 2px solid rgb(253, 247, 194) !important;
+}
+
+.checked {
+    color: #FB5D42;
+}
+
+.title-skill{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140.62%;
+    color: #FFFEC2;
+    font-family: "montserratbold";
+
+    margin-bottom: 0rem !important;
+
+}
+
+.navbar-nav li.active > a {
+	background: linear-gradient(270deg, rgba(63, 66, 117, 0.99) 0%, rgba(39, 51, 95, 0.54) 110.08%);
+    color: #fff;
+    border-radius: 0px 0 0 0px;;
+    
+}
+
+.navbar{
+    padding: 0 !important;
 }

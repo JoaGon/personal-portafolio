@@ -8,6 +8,7 @@
     <link href="resources/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -16,7 +17,9 @@
     <div class="full-height">
 
         <div class="container  m-content">
-            <div class="row">
+            <div class="row max-height">
+
+                <!-------HEADER-------->
                 <div class="col-sm-1 nav-col">
                     <!-- A vertical navbar -->
                     <nav class="navbar bg-light">
@@ -50,15 +53,17 @@
 
                     </nav>
                 </div>
+                <!-------/HEADER-------->
+
                 <div class="col-sm">
                     <div id="main-content">
-                        <div class="row">
-
-
-                            <div class="col-sm-8" style="height: 85%;
+                        <div class="row" style="height:100%">
+                            <div class="col-sm-8" style="height: 90%;
                             overflow-y: auto; overflow-x: hidden;">
 
                                 <!-- The data-tab attribute will be used by the tab that is clicked to identify the content to show -->
+
+                                <!------HOME---->
                                 <div id="pwait" class='tab content-profile' data-tab='a'>
                                     <h1 id="welcome-app" class="welcome-app">HELLO WORLD!</h1>
                                     <h1 class="hi-app">I'm <span class="name-app">Joanelly</span></h1>
@@ -70,6 +75,9 @@
                                     </div>
 
                                 </div>
+                                <!------/HOME---->
+
+                                <!------ABOUT ME---------->
                                 <div class='tab' data-tab='b' style='display: none'>
                                     <h1 class="about-app">About <span class="c-orange">Me</span></h1>
                                     <p class="about-me">I am a UI/UX Designer & Web Developer from Silicon
@@ -100,7 +108,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i class="fas fa-angle-double-right"></i><span>Date of
+
+                                                        <span>Date of
                                                             Birth</span>
                                                     </span>
                                                     <span class="dash">-</span>
@@ -110,8 +119,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i
-                                                            class="fas fa-angle-double-right"></i><span>Nationality</span>
+
+                                                        <span>Nationality</span>
                                                     </span>
                                                     <span class="dash">-</span>
                                                     <span class="value">Venezuelan</span>
@@ -124,7 +133,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i class="fas fa-angle-double-right"></i><span>Phone</span>
+
+                                                        <span>Phone</span>
                                                     </span>
                                                     <span class="dash">-</span>
                                                     <span class="value">+51 994 090 444</span>
@@ -133,7 +143,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i class="fas fa-angle-double-right"></i><span>Email</span>
+
+                                                        <span>Email</span>
                                                     </span>
                                                     <span class="dash">-</span>
                                                     <span class="value">joanellygonzalez@gmail.com</span>
@@ -142,7 +153,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i class="fas fa-angle-double-right"></i><span>Address</span>
+
+                                                        <span>Address</span>
                                                     </span>
                                                     <span class="dash">-</span>
                                                     <span class="value">Lima, Perú</span>
@@ -151,7 +163,8 @@
                                                 <!-- Single Content On Profile Starts -->
                                                 <li>
                                                     <span class="label">
-                                                        <i class="fas fa-angle-double-right"></i><span>Languages</span>
+
+                                                        <span>Languages</span>
                                                     </span>
                                                     <span class="dash">-</span>
                                                     <span class="value">English, Spanish</span>
@@ -170,20 +183,150 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="margin-button">
-                                                <button class="btn btn-primary btn-main">
+                                                <button onclick="downloadCv()"  class="btn btn-primary btn-main">
                                                     DOWNLOAD CV
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                       
+                                    <div class="row" style="margin-top: 5%;">
+
+                                        <div class="tabPanel-widget">
+                                            <label for="tab-1" tabindex="0"></label>
+                                            <input id="tab-1" type="radio" name="tabs" checked="true"
+                                                aria-hidden="true">
+                                            <h2>Experience</h2>
+                                            <div class="col-sm-12">
+
+                                                <ul class="about-ul">
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+                                                            <span>WEB DEVELOPER - TUKUTIN</span>
+                                                        </span>
+                                                        <span class="dash">2018-2020</span>
+                                                        <p class="value">Desarrollo de plataforma web para el manejo
+                                                            logístico de comercio Internacional
+                                                            www.tukutin.com</p>
+                                                    </li>
+                                                    <hr class="hr-yellow" align="left" width="40%">
+                                                    <!-- Single Content On Profile Ends -->
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+                                                            <span>WEB DEVELOPER - TUKUTIN</span>
+                                                        </span>
+                                                        <span class="dash">2018-2020</span>
+                                                        <p class="value">Desarrollo de plataforma web para el manejo
+                                                            logístico de comercio Internacional
+                                                            www.tukutin.com</p>
+                                                    </li>
+                                                    <hr class="hr-yellow" align="left" width="40%">
+                                                    <li>
+                                                        <span class="label">
+                                                            <span>WEB DEVELOPER - TUKUTIN</span>
+                                                        </span>
+                                                        <span class="dash">2018-2020</span>
+                                                        <p class="value">Desarrollo de plataforma web para el manejo
+                                                            logístico de comercio Internacional
+                                                            www.tukutin.com</p>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                            <label for="tab-2" tabindex="0"></label>
+                                            <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+                                            <h2>Skills</h2>
+                                            <div class="col-sm-12 row">
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">HTML</p>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">CSS</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">JAVASCRIPT</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">JAVA</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+
+
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">ANGULAR</p>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">MONGODB</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">NODEJS</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="title-skill">MYSQL</p>
+
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+                                        </div>
 
                                     </div>
-
-
                                 </div>
+                                <!------/ABOU
+                                    T ME---------->
+
+                                <!------MY PORTAFOLIO---------->
                                 <div class='tab' data-tab='c' style='display: none'>
                                     <h1 class="about-app">Work</h1>
                                     <p class="about-me">I am a UI/UX Designer & Web Developer from Silicon
@@ -197,36 +340,131 @@
                                         </button>
                                     </div>
                                 </div>
+                                <!------/MY PORTAFOLIO---------->
+
+                                <!------CONTACT ME---------->
                                 <div class='tab' data-tab='d' style='display: none'>
                                     <h1 class="about-app">Contact <span class="c-orange">Me</span></h1>
-                                    <p class="about-me">I am a UI/UX Designer & Web Developer from Silicon
-                                        Valley, USA. I am very passionate and dedicated to my work. I have 5
-                                        years more work experience. And enjoy working in a team or individual.
-                                    </p>
-                                    <span id="comment">Web developer</span>
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="usr" required>
+                                                        <label for="usr">Your name</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="usr" required>
+                                                        <label for="usr">Email</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                            rows="1"></textarea>
+                                                        <label for="usr">Comment</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="btn-width ">
+                                                <button class="btn btn-primary btn-main">
+                                                    SEND
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="container">
+                                                <ul class="contact-ul">
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+
+                                                            <span>Phone</span>
+                                                        </span>
+                                                        <br>
+                                                        <span class="value">+51 994 090 444</span>
+                                                    </li>
+                                                    <!-- Single Content On Profile Ends -->
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+
+                                                            <span>Email</span>
+                                                        </span>
+                                                        <br>
+                                                        <span class="value">joanellygonzalez@gmail.com</span>
+                                                    </li>
+                                                    <!-- Single Content On Profile Ends -->
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+
+                                                            <span>Address</span>
+                                                        </span>
+                                                        <br>
+                                                        <span class="value">Lima, Perú</span>
+                                                    </li>
+                                                    <!-- Single Content On Profile Ends -->
+                                                    <!-- Single Content On Profile Starts -->
+                                                    <li>
+                                                        <span class="label">
+
+                                                            <span>Languages</span>
+                                                        </span>
+                                                        <br>
+                                                        <span class="value">English, Spanish</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">
+
+                                                            <span>Social
+                                                                Media</span>
+                                                        </span>
+                                                        <br>
+                                                        <a target="_blank"
+                                                            href="https://www.linkedin.com/in/joanelly-gonzalez-azuaje/">
+                                                            <img class="icon-contact"
+                                                                src="resources/icons/contact/linkedin.png" alt="">
+                                                        </a>
+                                                        <a target="_blank"
+                                                            href="https://www.instagram.com/gonzalezjoanelly/">
+                                                            <img class="icon-contact"
+                                                                src="resources/icons/contact/instagram.png" alt="">
+                                                        </a>
+
+                                                    </li>
+                                                    <!-- Single Content On Profile Ends -->
+                                                </ul>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
                                     <div class="margin-button">
-                                        <button class="btn btn-primary btn-main">
-                                            CONTACT ME
-                                        </button>
+
                                     </div>
                                 </div>
-
+                                <!------/CONTACT ME---------->
                             </div>
                             <div class="col-sm-4">
                                 <img id="image-main" class="image-profile" src="resources/images/joanellygonzalez.png"
                                     alt="">
-                                <img id="image-about" class="image-profile" src="resources/images/joabout.png" alt="">
+
                             </div>
                         </div>
-                        <div class="row">
+
+                        <!------FOOTER---------->
+                        <!--div class="row">
                             <div class="col-sm-4 row content-icon-footer">
                                 <div class="col-sm-2">
-                                    <a href="#">
+                                    <a target="_blank" href="https://www.linkedin.com/in/joanelly-gonzalez-azuaje/">
                                         <img class="icon-footer" src="resources/icons/footer/linkedin.png" alt="">
                                     </a>
                                 </div>
                                 <div class="col-sm-2">
-                                    <a href="#">
+                                    <a target="_blank" href="https://www.instagram.com/gonzalezjoanelly/">
                                         <img class="icon-footer" src="resources/icons/footer/instagram.png" alt="">
                                     </a>
                                 </div>
@@ -234,7 +472,8 @@
                             <div class="col-sm-8  align-right">
                                 <span class="name-footer">© Joanelly Gonzalez</span>
                             </div>
-                        </div>
+                        </div-->
+                        <!------/FOOTER---------->
                     </div>
                 </div>
 
