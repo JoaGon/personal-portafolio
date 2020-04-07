@@ -9,14 +9,28 @@ function showit() {
 $(function () {
     // When an open tab item from your menu is clicked
     $(".nav-link").click(function () {
-        // Hide any of the content tabs
-        $(".tab").hide();
+        if ($(this).data('tab') == 'a' || $(this).data('tab') == 'b' || $(this).data('tab') == 'c' || $(this).data('tab') == 'd') {
+            // Hide any of the content tabs
+            $(".tab").hide();
 
-        // Show your active tab (read from your data attribute)
-        $('[data-tab ="' + $(this).data('tab') + '"]').show();
-        // Optional: Highlight the selected tab
-        $('li.active').removeClass('active');
-        $(this).closest('li').addClass('active');
+            // Show your active tab (read from your data attribute)
+            $('[data-tab ="' + $(this).data('tab') + '"]').show();
+            // Optional: Highlight the selected tab
+            $('li.active').removeClass('active');
+            $(this).closest('li').addClass('active');
+            if ($(this).data('tab') == 'c') {
+                $('#image-main').css('display', 'none')
+                let el = document.getElementById('content-col')
+                el.classList.remove("col-sm-8");
+                el.classList.add("col-sm-12")
+            } else {
+                $('#image-main').css('display', 'block')
+                let el = document.getElementById('content-col')
+                el.classList.remove("col-sm-12");
+                el.classList.add("col-sm-8")
+
+            }
+        }
 
     });
 });
