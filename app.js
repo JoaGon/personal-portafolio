@@ -15,9 +15,12 @@ $(function () {
 
             // Show your active tab (read from your data attribute)
             $('[data-tab ="' + $(this).data('tab') + '"]').show();
+            
             // Optional: Highlight the selected tab
             $('li.active').removeClass('active');
-            $(this).closest('li').addClass('active');
+            $(document.querySelectorAll("[data-tab='" + $(this).data('tab') + "']")[0]).closest('li').addClass('active');
+
+            //$('.nav-item').andSelf().find("[data-tab='" + $(this).data('tab') + "']").addClass('active');
             if ($(this).data('tab') == 'c') {
                 $('#image-main').css('display', 'none')
                 let el = document.getElementById('content-col')
