@@ -835,6 +835,13 @@ section .section-title {
     .btn-main{
         font-size: 14px !important;
     }
+    #main-content{
+        top: 10% !important;
+        position: inherit;
+    }
+    .about-app{
+        font-size: 3rem;
+    }
  }
 
 
