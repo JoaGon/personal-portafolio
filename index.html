@@ -56,26 +56,26 @@
                     <nav class="nav hidden-sm-down">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" data-tab='a' href="#home" role="tab"
                                     aria-controls="home" aria-selected="true">
                                     <img class="img-nav-xs" src="resources/icons/navbar/home.png" alt="">
                                     <span class="img-span-xs">Home</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" data-tab='b' role="tab"
                                     aria-controls="profile" aria-selected="false">
                                     <img class="img-nav-xs" src="resources/icons/navbar/about.png" alt="">
                                     <span class="img-span-xs">About</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
+                                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" data-tab='c' role="tab"
                                     aria-controls="messages" aria-selected="false">   <img class="img-nav-xs" src="resources/icons/navbar/portafolio.png" alt="">
                                     <span class="img-span-xs">Portafolio</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" data-tab='d' role="tab"
                                     aria-controls="settings" aria-selected="false"> <img class="img-nav-xs" src="resources/icons/navbar/contact.png" alt="">
                                     <span class="img-span-xs">Contact</span></a>
                             </li>
@@ -86,7 +86,7 @@
 
                 <div class="col-sm-11">
                     <div id="main-content">
-                        <div class="row" style="height:100%">
+                        <div class="row main-height">
                             <div class="col-sm-8" id="content-col" >
 
                                 <!-- The data-tab attribute will be used by the tab that is clicked to identify the content to show -->
@@ -455,13 +455,13 @@
                                                         <label for="usr">Your name</label>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" id="usr" required>
-                                                        <label for="usr">Email</label>
+                                                        <input type="text" class="form-control" id="email" required>
+                                                        <label for="email">Email</label>
                                                     </div>
                                                     <div class="form-group">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        <textarea class="form-control" id="comment"
                                                             rows="1"></textarea>
-                                                        <label for="usr">Comment</label>
+                                                        <label for="comment">Comment</label>
                                                     </div>
 
                                                 </div>

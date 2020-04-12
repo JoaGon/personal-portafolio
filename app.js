@@ -1,11 +1,29 @@
 gsap.to(".box", { rotation: 27, x: 100, duration: 1 });
 function showit() {
+    console.log('Aqui1');
+
     var wt = $("#pwait");
     var tl = new TimelineLite();
+
 
     tl.to(wt, 1, { left: 80, autoAlpha: 1 });
 
 }
+
+function showitXs() {
+    console.log('Aqui2');
+    
+    var wt = $("#pwait");
+    var tl = new TimelineLite();
+
+
+    tl.to(wt, 1, { left: 20, autoAlpha: 1 });
+
+}
+
+
+
+
 $(function () {
     // When an open tab item from your menu is clicked
     $(".nav-link").click(function () {
@@ -15,7 +33,7 @@ $(function () {
 
             // Show your active tab (read from your data attribute)
             $('[data-tab ="' + $(this).data('tab') + '"]').show();
-            
+
             // Optional: Highlight the selected tab
             $('li.active').removeClass('active');
             $(document.querySelectorAll("[data-tab='" + $(this).data('tab') + "']")[0]).closest('li').addClass('active');
@@ -39,7 +57,12 @@ $(function () {
 });
 
 $(document).ready(function () {
-    showit()
+
+    if (window.matchMedia('screen and (max-width: 768px)').matches) {
+        showitXs()
+    }else{
+        showit()
+    }
 });
 
 function showOtherImage() {
