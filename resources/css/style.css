@@ -841,6 +841,30 @@ section .section-title {
     display: none !important;
 }
 
+#sucess-msg{
+    display: none;
+    color: #fff;
+    height: 42px;
+    width: 100%;
+    line-height: 42px;
+    background: green;
+    margin-top: 15px;
+    border-radius: 50px;
+    font-family: "montserratregular";
+
+}
+#error-msg{
+    display: none;
+    color: #fff;
+    height: 42px;
+    width: 100%;
+    line-height: 42px;
+    background: red;
+    margin-top: 15px;
+    border-radius: 50px;
+    font-family: "montserratregular";
+}
+
 @media (max-width: 991px) { 
     .full-height{
         background: linear-gradient(180deg, #0C1C56 0.2%, #414376 100%);
@@ -1152,3 +1176,4 @@ section .section-title {
 {
 
 }
+

@@ -96,15 +96,16 @@
                                 <!------HOME---->
 
 
-                                <div id="pwait" class='tab content-profile' data-tab='a'>
+                                <div id="pwait" class='tab content-profile' data-tab-show='a'>
                                     <div class="col-12 col-sm-4">
-                                        <img id="image-home" 
-                                            src="resources/images/joanellygonzalez.png" alt="">
+                                        <img id="image-home" src="resources/images/joanellygonzalez.png" alt="">
 
                                     </div>
                                     <h1 id="welcome-app" class="welcome-app">HELLO WORLD!</h1>
                                     <h1 class="hi-app">I'm <span class="name-app">Joanelly</span></h1>
-                                    <span id="comment">Web developer</span>
+
+                                    <span id="comment" class="txt-rotate" data-period="2000"
+                                        data-rotate='[ "Web developer", "Web designer." ]'></span>
                                     <div class="margin-button btn-width">
                                         <button href="#" data-tab='d' class="btn btn-primary btn-main nav-link">
                                             CONTACT ME
@@ -115,7 +116,7 @@
                                 <!------/HOME---->
 
                                 <!------ABOUT ME---------->
-                                <div class='tab' data-tab='b' style='display: none'>
+                                <div class='tab' data-tab-show='b' style='display: none'>
                                     <h1 class="about-app">About <span class="c-orange">Me</span></h1>
                                     <p class="about-me">I am a UI/UX Designer & Web Developer from Silicon
                                         Valley, USA. I am very passionate and dedicated to my work. I have 5
@@ -385,7 +386,7 @@
                                     T ME---------->
 
                                 <!------MY PORTAFOLIO---------->
-                                <div class='tab' data-tab='c' style='display: none'>
+                                <div class='tab' data-tab-show='c' style='display: none'>
                                     <h1 class="about-app">Work</h1>
                                     <section id="tabs">
                                         <div class="container">
@@ -472,36 +473,48 @@
                                 <!------/MY PORTAFOLIO---------->
 
                                 <!------CONTACT ME---------->
-                                <div class='tab' data-tab='d' style='display: none'>
+                                <div class='tab' data-tab-show='d' style='display: none'>
                                     <h1 class="about-app">Contact <span class="c-orange">Me</span></h1>
 
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
-                                            <form action="" id="myForm">
+
+
+                                            <form id="my-form" action="https://formspree.io/xaydrjyd" method="POST">
 
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" id="usr" required>
+                                                            <input type="text" name="name" class="form-control" id="usr"
+                                                                required>
                                                             <label for="usr">Your name</label>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" id="email" required>
+                                                            <input type="email" class="form-control" name="email"
+                                                                id="email" required>
                                                             <label for="email">Email</label>
                                                         </div>
 
                                                         <div class="form-group text-group">
-                                                            <textarea type="text" class="form-control tex-form"
-                                                                id="comment-text" required></textarea>
+                                                            <textarea type="text" name="message"
+                                                                class="form-control tex-form" id="comment-text"
+                                                                required></textarea>
                                                             <label for="comment">Comment</label>
                                                         </div>
 
                                                     </div>
                                                 </div>
                                                 <div class="btn-width ">
-                                                    <button class="btn btn-primary btn-main">
+                                                    <button type="submit" id="my-form-button"
+                                                        class="btn btn-primary btn-main">
                                                         SEND
                                                     </button>
+                                                </div>
+                                                <div class="col-sm-12" id="error-msg">
+                                                    <p id="my-form-status-error"></p>
+                                                </div>
+                                                <div class="col-sm-12" id="sucess-msg">
+                                                    <p id="my-form-status-sucess"></p>
                                                 </div>
                                             </form>
                                         </div>
@@ -615,6 +628,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
 
 </html>
