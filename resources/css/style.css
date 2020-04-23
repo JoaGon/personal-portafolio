@@ -98,6 +98,11 @@ html, body {
     display: inline-block !important;
 }
 
+a{
+
+    color: #f45b41 !important;
+}
+
 .app {
     color: aqua;
 }
@@ -125,6 +130,10 @@ html, body {
 .nav-item{
     font-size: 14px;
     
+}
+.nav-tabs {
+
+    border-bottom: none !important;
 }
 .navbar-nav .nav-item .nav-link  {
     color: #fffec2 !important;
@@ -733,7 +742,7 @@ section .section-title {
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    color: #eee;
+    color: #f45b41;
     font-size: 20px;
     z-index: 3;
     position: relative;
@@ -742,6 +751,7 @@ section .section-title {
 .img-portafolio{
     width: 370px;
     height: auto;
+    border-radius: 5px;
 }
 .rombo::after {
     content: '';
@@ -769,6 +779,7 @@ section .section-title {
 .my-nav .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     background-color: transparent !important;
     border-color: transparent !important;
+    color: #fdf7c2 !important;
 }
 
 #myTab{
@@ -778,6 +789,13 @@ section .section-title {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
+}
+.p_hr{
+    border-top: 1px solid rgba(0,0,0,.1);
+    height: 0px;
+    left: 231px;
+    top: 477px;
+    border: 2px solid #FFFEC2;
 }
 
 #myTab li {
@@ -812,7 +830,7 @@ section .section-title {
     content: '';
     position: absolute;
     bottom: 7px;
-    left: 7px;
+    left: 10px;
     z-index: -1;
     right: 0;
     width: 0;
@@ -1085,13 +1103,17 @@ section .section-title {
 
     .tabPanel-widget > input + h2 + div {
         display: flex !important;
-        padding-bottom: 120px !important;
+        padding-bottom: 140px !important;
     }
     .btn-main {
         line-height: 0.5 !important;
     }
       
     .tab-content {
+        padding-bottom: 8rem !important;
+    }
+
+    .tab-pane {
         padding-bottom: 8rem !important;
     }
     article, aside, figcaption, figure, footer, header, hgroup, main, nav, section{

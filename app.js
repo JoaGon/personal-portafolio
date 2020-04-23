@@ -139,13 +139,19 @@ $(function () {
                 $('#image-main').css('display', 'none')
                 let el = document.getElementById('content-col')
                 el.classList.remove("col-sm-8");
+                el.classList.remove("col-lg-8");
                 el.classList.add("col-sm-12")
+                el.classList.add("col-lg-12")
+
+                console.log(el);
+                
             } else {
                 $('#image-main').css('display', 'block')
                 let el = document.getElementById('content-col')
                 el.classList.remove("col-sm-12");
+                el.classList.remove("col-lg-12");
                 el.classList.add("col-sm-8")
-
+                el.classList.add("col-lg-8")
             }
         }
 
