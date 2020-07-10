@@ -29,9 +29,15 @@
 </head>
 
 <body class="disableScroll">
-
-    <div class="full-height">
-
+ 
+    <div class="full-height" >
+        <div class="row" id="loaders">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
         <div class="container  m-content">
             <div class="row max-height">
 
@@ -104,6 +110,7 @@
 
                 <div class="col-sm-11">
                     <div id="main-content">
+                      
                         <div class="row main-height">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-8" id="content-col">
 
@@ -111,7 +118,7 @@
 
                                 <!------HOME---->
 
-
+                             
                                 <div id="pwait" class='tab content-profile' data-tab-show='a'>
                                     <div class="col-12 col-sm-4">
                                         <img id="image-home" src="resources/images/joanellygonzalez.png" alt="">
@@ -683,7 +690,7 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <input type="text" name="name" class="form-control" id="usr"
+                                                            <input type="text" name="name" class="form-control" id="name"
                                                                 required>
                                                             <label for="usr">Your name</label>
                                                         </div>
@@ -695,7 +702,7 @@
 
                                                         <div class="form-group text-group">
                                                             <textarea type="text" name="message"
-                                                                class="form-control tex-form" id="comment-text"
+                                                                class="form-control tex-form" id="message"
                                                                 required></textarea>
                                                             <label for="comment">Comment</label>
                                                         </div>
@@ -708,6 +715,8 @@
                                                         SEND
                                                     </button>
                                                 </div>
+                                                
+                                               
                                                 <div class="col-sm-12" id="error-msg">
                                                     <p id="my-form-status-error"></p>
                                                 </div>
@@ -826,6 +835,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
+    <script src="resources/js/animations.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
 </body>

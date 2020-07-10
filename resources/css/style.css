@@ -1,7 +1,7 @@
-html, body {
-    height: 100%;
-    margin: 0px;
-}
+body { width: 100%; height: auto; }
+
+html { position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: auto; }
+
   
 
 @font-face {
@@ -1199,3 +1199,81 @@ section .section-title {
 
 }
 
+spinner {
+    display: none;
+}
+#overlay{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .1;
+}
+
+.spinner {
+    margin: auto;
+    width: 70px;
+    text-align: center;
+    z-index: 999;
+    
+  }
+  #loaders{
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .9;
+    z-index: 999;
+    display: none;
+
+  }
+  
+  .spinner > div {
+    
+    width: 18px;
+    height: 18px;
+    background-color: #ec593d;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
